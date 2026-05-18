@@ -9,9 +9,9 @@ def print_keypad(combinations,curr,output,n):
         print_keypad(combinations,curr+1,output,n)
         return
     for ch in keypad[digit]:
-        keypad.append(ch)
+        output.append(ch)
         print_keypad(combinations,curr+1,output,n)
-        keypad.pop()
+        output.pop()
 combinations=[4,3,4]
 n=len(combinations)
 print_keypad(combinations,0,[],n)
